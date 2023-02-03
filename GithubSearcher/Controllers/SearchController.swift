@@ -32,18 +32,7 @@ class SearchController: UIViewController {
     }
 }
 
-// write tests
 // update readme
-
-// text if isPaginating actually works
-
-// test network call
-// test setup func in
-
-// test the spinner
-// test tableview updating - uitest
-// test detail page working
-//
 
 extension SearchController: UITableViewDataSource {
     
@@ -72,13 +61,9 @@ extension SearchController: UITableViewDelegate, UIScrollViewDelegate {
         let position = scrollView.contentOffset.y
         counter += 1
         if position > (tableView.contentSize.height-50-scrollView.frame.size.height) {
-            guard !networkManager.isPaginating else {
-                // already fetching more data
-                return
-            }
             // fetch more data
             tableView.tableFooterView = createSpinner()
-            networkManager.fetchUser(searchQuery: inputText, pageNum: counter, pagination: true)
+            networkManager.fetchUser(searchQuery: inputText, pageNum: counter)
             tableView.tableFooterView = nil
 
         }

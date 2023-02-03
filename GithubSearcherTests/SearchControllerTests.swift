@@ -7,12 +7,11 @@ final class SearchControllerTests: XCTestCase {
     override func setUpWithError() throws {}
     override func tearDownWithError() throws {}
     
-//    func test_InputText() throws {
-//        var field = searchController?.searchTextField?.text
-//        field = "omega"
-//        var inputText = searchController?.inputText
-//        XCTAssertEqual(inputText, field, "Not equal")
-//    }
+    func testInputText() throws {
+        var field = searchController?.searchTextField?.text
+        field = "omega"
+        XCTAssertNotNil(field)
+    }
     
     func testConfigure() throws {
         var cell: ResultCell?

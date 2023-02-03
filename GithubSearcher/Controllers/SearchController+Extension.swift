@@ -5,9 +5,6 @@ import SDWebImage
 extension SearchController: NetworkManagerDelegate {
     
     func didUpdateUser(_ networkManager: NetworkManager, user:  User) {
-//        var networkMan = networkManager
-//        networkMan.isPaginating = false
-        self.networkManager.isPaginating = false
         DispatchQueue.main.async {[weak self] in
             self?.userList.append(
                 contentsOf: user.items

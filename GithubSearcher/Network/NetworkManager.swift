@@ -5,12 +5,8 @@ protocol NetworkManagerDelegate {
 }
 struct NetworkManager {
     var delegate: NetworkManagerDelegate?
-    var isPaginating: Bool = false
-    mutating func fetchUser(searchQuery: String, pageNum: Int = 1, pagination: Bool = false) {
+    func fetchUser(searchQuery: String, pageNum: Int = 1) {
         let urlString = "\(Constants.baseUrl)\(searchQuery)\(Constants.midUrl)\(pageNum)"
-        if(pagination) {
-            isPaginating = true 
-        }
         performRequest(with: urlString)
     }
     
