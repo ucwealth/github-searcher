@@ -8,7 +8,7 @@ struct NetworkManager {
     var delegate: NetworkManagerDelegate?
     
     func fetchUser(searchQuery: String) {
-        let urlString = "\(Constants.baseUrl)\(searchQuery)"
+        let urlString = "\(Constants.baseUrl)\(searchQuery)&per_page=10"
         performRequest(with: urlString)
     }
     

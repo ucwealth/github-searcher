@@ -18,7 +18,9 @@ class DetailViewController: UIViewController {
     }
     
     private func setup(with model: Item) {
-        avatar.image = UIImage(named: model.avatarURL)
+        avatar.loadImage(from: URL(string: model.avatarURL)!)
+
+//        avatar.image = UIImage(named: model.avatarURL)
         login.text = model.login
         type.text = model.type
     }

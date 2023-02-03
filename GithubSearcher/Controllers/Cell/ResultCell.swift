@@ -11,7 +11,7 @@ class ResultCell: UITableViewCell {
     }
     
     func configure(_ model: Item) {
-        avatar.image = UIImage(named: model.avatarURL)
+        avatar.loadImage(from: URL(string: model.avatarURL)!)
         login.text = model.login
         type.text = model.type
     }

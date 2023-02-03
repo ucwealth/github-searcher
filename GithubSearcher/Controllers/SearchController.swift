@@ -17,17 +17,21 @@ class SearchController: UIViewController {
         tableView.register(
                     ResultCell.nib,
                     forCellReuseIdentifier: ResultCell.identifier)
+        tableView.isHidden = true
     }
 
 }
 
-// ToDo: dont show tables until search is done
 // pagination
+// style table row properly
+// sort alphabetically by login
 
 extension SearchController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return user?.totalCount ?? 1
+//        return user?.totalCount ?? 10
+        let resultArray = user?.items
+        return resultArray?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,6 +69,7 @@ extension SearchController: NetworkManagerDelegate {
         DispatchQueue.main.async {[weak self] in
             self?.user = user
             self?.tableView.reloadData()
+            self?.tableView.isHidden = false
         }
     }
     
