@@ -24,13 +24,9 @@ class SearchController: UIViewController {
         tableView.isHidden = true
     }
 }
-// sort each ten alphabetically
-// clear former search results when doing another search
 // add spinner at page bottom
-// style table row properly
 // sort alphabetically by login
 // add sdwebimage
-// clear result of previous search when new search begins
 
 extension SearchController: UITableViewDataSource {
     

@@ -25,7 +25,7 @@
                     <rect key="frame" x="28" y="68.999999999999972" width="337" height="418.33333333333326"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ls3-dZ-ivY">
-                    <rect key="frame" x="28" y="518.33333333333337" width="337" height="56"/>
+                    <rect key="frame" x="28" y="511.33333333333337" width="337" height="56"/>
                     <attributedString key="attributedText">
                         <fragment content="login">
                             <attributes>
@@ -53,9 +53,9 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="ls3-dZ-ivY" firstAttribute="top" secondItem="dgh-yK-4mV" secondAttribute="bottom" constant="31" id="7Fq-94-ZQ4"/>
+                <constraint firstItem="ls3-dZ-ivY" firstAttribute="top" secondItem="dgh-yK-4mV" secondAttribute="bottom" constant="24.000000000000114" id="7Fq-94-ZQ4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dgh-yK-4mV" secondAttribute="trailing" constant="28" id="CYb-YS-dJs"/>
-                <constraint firstItem="lUD-3F-unW" firstAttribute="top" secondItem="ls3-dZ-ivY" secondAttribute="bottom" constant="17.666666666666629" id="Egc-Dt-Xya"/>
+                <constraint firstItem="lUD-3F-unW" firstAttribute="top" secondItem="ls3-dZ-ivY" secondAttribute="bottom" constant="24.666666666666629" id="Egc-Dt-Xya"/>
                 <constraint firstItem="ls3-dZ-ivY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="deT-iA-lmO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ls3-dZ-ivY" secondAttribute="trailing" constant="28" id="ejm-mj-DZf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lUD-3F-unW" secondAttribute="bottom" constant="198" id="jSN-vH-XgJ"/>

@@ -28,12 +28,11 @@ extension SearchController: UITextFieldDelegate {
     }
 
     @IBAction func searchButtonPressed(_ sender: UIButton) {
+        userList = []
         searchTextField.endEditing(true)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        // clear table data
-        tableView.dr
         if let input = searchTextField.text {
             self.inputText = input
             networkManager.fetchUser(searchQuery: input, pageNum: 1, pagination: false)
