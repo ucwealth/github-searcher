@@ -1,10 +1,3 @@
-//
-//  GithubSearcherUITestsLaunchTests.swift
-//  GithubSearcherUITests
-//
-//  Created by Uche Okeke on 02/02/2023.
-//
-
 import XCTest
 
 final class GithubSearcherUITestsLaunchTests: XCTestCase {

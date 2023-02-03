@@ -1,38 +1,39 @@
-//
-//  GithubSearcherUITests.swift
-//  GithubSearcherUITests
-//
-//  Created by Uche Okeke on 02/02/2023.
-//
-
 import XCTest
 
 final class GithubSearcherUITests: XCTestCase {
+    let app = XCUIApplication()
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
         app.launch()
+    }
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    override func tearDownWithError() throws {}
+
+    func testSearchInput() throws {
+        let searchField = app.textFields["searchTextfield"]
+        XCTAssertTrue(searchField.exists, "Text field doesn't exist")
+        XCTAssertEqual(searchField.placeholderValue, "Enter search text")
+        searchField.tap()
+        searchField.typeText("omega")
+        XCTAssertEqual(searchField.value as! String, "omega", "Value is incorrect")
+        
+        let searchButton = app.buttons["Search"]
+        XCTAssert(searchButton.exists)
+        searchButton.tap()
+        XCTAssert(searchButton.isEnabled)
+    }
+    
+    func testResultList() throws {
+                
+    }
+    
+    func testDetailScreen() throws {
+
     }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
             }

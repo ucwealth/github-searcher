@@ -37,9 +37,8 @@ class SearchController: UIViewController {
 
 // text if isPaginating actually works
 
-// test sdweb image caching
 // test network call
-// test setup func in 
+// test setup func in
 
 // test the spinner
 // test search box functionality uitest

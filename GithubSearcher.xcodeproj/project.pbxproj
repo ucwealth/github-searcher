@@ -26,7 +26,7 @@
 		E43424E5298D1D0B00588ECF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424E4298D1D0B00588ECF /* Extensions.swift */; };
 		E43424E7298D31A300588ECF /* SearchController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424E6298D31A300588ECF /* SearchController+Extension.swift */; };
 		E43424EA298D76BF00588ECF /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E43424E9298D76BF00588ECF /* SDWebImage */; };
-		E43424EC298D977E00588ECF /* Test_SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424EB298D977E00588ECF /* Test_SearchController.swift */; };
+		E43424EC298D977E00588ECF /* SearchControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424EB298D977E00588ECF /* SearchControllerTests.swift */; };
 		E43424EF298D98F300588ECF /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E43424EE298D98F300588ECF /* SDWebImage */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +70,7 @@
 		E43424E2298C5EE400588ECF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E43424E4298D1D0B00588ECF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E43424E6298D31A300588ECF /* SearchController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchController+Extension.swift"; sourceTree = "<group>"; };
-		E43424EB298D977E00588ECF /* Test_SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_SearchController.swift; sourceTree = "<group>"; };
+		E43424EB298D977E00588ECF /* SearchControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				E43424A1298BB2BC00588ECF /* GithubSearcherTests.swift */,
-				E43424EB298D977E00588ECF /* Test_SearchController.swift */,
+				E43424EB298D977E00588ECF /* SearchControllerTests.swift */,
 			);
 			path = GithubSearcherTests;
 			sourceTree = "<group>";
@@ -393,7 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E43424A2298BB2BC00588ECF /* GithubSearcherTests.swift in Sources */,
-				E43424EC298D977E00588ECF /* Test_SearchController.swift in Sources */,
+				E43424EC298D977E00588ECF /* SearchControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

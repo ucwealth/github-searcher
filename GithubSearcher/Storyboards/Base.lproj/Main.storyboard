@@ -19,6 +19,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter search text" textAlignment="natural" minimumFontSize="25" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-yz-wSh">
                                 <rect key="frame" x="0.0" y="103" width="393" height="70"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <accessibility key="accessibilityConfiguration" identifier="searchTextfield"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="ceb-4E-TVs"/>
                                 </constraints>
