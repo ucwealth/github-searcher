@@ -41,7 +41,6 @@ class SearchController: UIViewController {
 // test setup func in
 
 // test the spinner
-// test search box functionality uitest
 // test tableview updating - uitest
 // test detail page working
 //
