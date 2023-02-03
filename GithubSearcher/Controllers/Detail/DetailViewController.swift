@@ -11,6 +11,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        view.backgroundColor = .lightGray
         if let res = result {
             setup(with: res)
         }

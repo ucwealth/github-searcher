@@ -23,7 +23,7 @@ class SearchController: UIViewController {
     }
     
     private func createSpinner() -> UIView {
-        let spinnerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
+        let spinnerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
         let spinner = UIActivityIndicatorView()
         spinner.center = spinnerView.center
         spinnerView.addSubview(spinner)

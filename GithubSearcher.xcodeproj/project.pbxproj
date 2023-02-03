@@ -22,7 +22,6 @@
 		E43424CB298BEFB100588ECF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424CA298BEFB100588ECF /* NetworkManager.swift */; };
 		E43424DA298BF87D00588ECF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424D8298BF87D00588ECF /* DetailViewController.swift */; };
 		E43424DB298BF87D00588ECF /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43424D9298BF87D00588ECF /* DetailViewController.xib */; };
-		E43424E0298C4D4600588ECF /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424DF298C4D4600588ECF /* DetailsController.swift */; };
 		E43424E3298C5EE400588ECF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424E2298C5EE400588ECF /* Constants.swift */; };
 		E43424E5298D1D0B00588ECF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424E4298D1D0B00588ECF /* Extensions.swift */; };
 		E43424E7298D31A300588ECF /* SearchController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424E6298D31A300588ECF /* SearchController+Extension.swift */; };
@@ -66,7 +65,6 @@
 		E43424CA298BEFB100588ECF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E43424D8298BF87D00588ECF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E43424D9298BF87D00588ECF /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
-		E43424DF298C4D4600588ECF /* DetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsController.swift; sourceTree = "<group>"; };
 		E43424E2298C5EE400588ECF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E43424E4298D1D0B00588ECF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E43424E6298D31A300588ECF /* SearchController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchController+Extension.swift"; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				E43424E6298D31A300588ECF /* SearchController+Extension.swift */,
 				E43424C6298BE49B00588ECF /* Cell */,
 				E43424DC298BF88C00588ECF /* Detail */,
-				E43424DF298C4D4600588ECF /* DetailsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -363,7 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E43424DA298BF87D00588ECF /* DetailViewController.swift in Sources */,
-				E43424E0298C4D4600588ECF /* DetailsController.swift in Sources */,
 				E43424C8298BE74000588ECF /* User.swift in Sources */,
 				E434248F298BB2BA00588ECF /* SearchController.swift in Sources */,
 				E43424E3298C5EE400588ECF /* Constants.swift in Sources */,
