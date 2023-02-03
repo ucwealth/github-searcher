@@ -26,6 +26,7 @@
 		E43424E0298C4D4600588ECF /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424DF298C4D4600588ECF /* DetailsController.swift */; };
 		E43424E3298C5EE400588ECF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424E2298C5EE400588ECF /* Constants.swift */; };
 		E43424E5298D1D0B00588ECF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424E4298D1D0B00588ECF /* Extensions.swift */; };
+		E43424E7298D31A300588ECF /* SearchController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43424E6298D31A300588ECF /* SearchController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		E43424DF298C4D4600588ECF /* DetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsController.swift; sourceTree = "<group>"; };
 		E43424E2298C5EE400588ECF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E43424E4298D1D0B00588ECF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E43424E6298D31A300588ECF /* SearchController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				E43424C6298BE49B00588ECF /* Cell */,
 				E43424DC298BF88C00588ECF /* Detail */,
 				E43424DF298C4D4600588ECF /* DetailsController.swift */,
+				E43424E6298D31A300588ECF /* SearchController+Extension.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				E434248F298BB2BA00588ECF /* SearchController.swift in Sources */,
 				E43424DE298C179800588ECF /* ResultViewModel.swift in Sources */,
 				E43424E3298C5EE400588ECF /* Constants.swift in Sources */,
+				E43424E7298D31A300588ECF /* SearchController+Extension.swift in Sources */,
 				E43424C3298BCD5C00588ECF /* ResultCell.swift in Sources */,
 				E43424CB298BEFB100588ECF /* NetworkManager.swift in Sources */,
 				E434248B298BB2BA00588ECF /* AppDelegate.swift in Sources */,
