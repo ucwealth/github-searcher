@@ -16,14 +16,6 @@ extension SearchController: NetworkManagerDelegate {
         print("Error: ",error)
     }
     
-//    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
-//        DispatchQueue.main.async {
-//            self.temperatureLabel.text = weather.tempString
-//            self.conditionImageView.image = UIImage(systemName: weather.conditionName)
-//            self.cityLabel.text = weather.cityName
-//        }
-//    }
-    
 }
 
 // MARK: - TextFieldDelegate
@@ -40,8 +32,11 @@ extension SearchController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        // clear table data
+        tableView.dr
         if let input = searchTextField.text {
-            networkManager.fetchUser(searchQuery: input, pageNum: 1)
+            self.inputText = input
+            networkManager.fetchUser(searchQuery: input, pageNum: 1, pagination: false)
         }
         textField.text = ""
     }
@@ -56,4 +51,3 @@ extension SearchController: UITextFieldDelegate {
     }
     
 }
-

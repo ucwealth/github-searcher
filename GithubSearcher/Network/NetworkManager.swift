@@ -2,20 +2,19 @@ import Foundation
 protocol NetworkManagerDelegate {
     func didUpdateUser(_ networkManager: NetworkManager, user: User)
     func didFailWithError(error: Error)
-
 }
 struct NetworkManager {
     var delegate: NetworkManagerDelegate?
-    
-    func fetchUser(searchQuery: String, pageNum: Int) {
+    var isPaginating = false
+
+    mutating func fetchUser(searchQuery: String, pageNum: Int, pagination: Bool = false) {
+        if pagination {
+            isPaginating = true
+        }
         let urlString = "\(Constants.baseUrl)\(searchQuery)&per_page=10&page=\(pageNum)"
         performRequest(with: urlString)
     }
-    
-//    fetchOtherPages(searchQuery: String) {
-//        let urlString = "\(Constants.baseUrl)\(searchQuery)&per_page=10&page=\()"
-//        performRequest(with: urlString)
-//    }
+    // if pagination is true, return new data. else, return old data
     
     func performRequest(with urlString: String) {
         guard let url = URL(string: urlString) else {

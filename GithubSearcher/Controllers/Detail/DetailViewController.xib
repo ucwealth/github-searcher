@@ -22,33 +22,46 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-yK-4mV">
-                    <rect key="frame" x="28" y="93" width="337" height="540"/>
+                    <rect key="frame" x="28" y="68.999999999999972" width="337" height="418.33333333333326"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUD-3F-unW">
-                    <rect key="frame" x="28" y="725" width="337" height="23"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                    <color key="textColor" systemColor="linkColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ls3-dZ-ivY">
+                    <rect key="frame" x="28" y="518.33333333333337" width="337" height="56"/>
+                    <attributedString key="attributedText">
+                        <fragment content="login">
+                            <attributes>
+                                <font key="NSFont" size="48" name="Luminari-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls3-dZ-ivY">
-                    <rect key="frame" x="28" y="657" width="337" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUD-3F-unW">
+                    <rect key="frame" x="28" y="592" width="337" height="28"/>
+                    <attributedString key="attributedText">
+                        <fragment content="type">
+                            <attributes>
+                                <color key="NSColor" systemColor="linkColor"/>
+                                <font key="NSFont" size="24" name="Monaco"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="13" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="ls3-dZ-ivY" firstAttribute="top" secondItem="dgh-yK-4mV" secondAttribute="bottom" constant="24" id="7Fq-94-ZQ4"/>
+                <constraint firstItem="ls3-dZ-ivY" firstAttribute="top" secondItem="dgh-yK-4mV" secondAttribute="bottom" constant="31" id="7Fq-94-ZQ4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dgh-yK-4mV" secondAttribute="trailing" constant="28" id="CYb-YS-dJs"/>
-                <constraint firstItem="lUD-3F-unW" firstAttribute="top" secondItem="ls3-dZ-ivY" secondAttribute="bottom" constant="38" id="Egc-Dt-Xya"/>
+                <constraint firstItem="lUD-3F-unW" firstAttribute="top" secondItem="ls3-dZ-ivY" secondAttribute="bottom" constant="17.666666666666629" id="Egc-Dt-Xya"/>
                 <constraint firstItem="ls3-dZ-ivY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="deT-iA-lmO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ls3-dZ-ivY" secondAttribute="trailing" constant="28" id="ejm-mj-DZf"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lUD-3F-unW" secondAttribute="bottom" constant="70" id="jSN-vH-XgJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lUD-3F-unW" secondAttribute="bottom" constant="198" id="jSN-vH-XgJ"/>
                 <constraint firstItem="lUD-3F-unW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="mAM-qz-Wog"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lUD-3F-unW" secondAttribute="trailing" constant="28" id="qex-2a-EaB"/>
-                <constraint firstItem="dgh-yK-4mV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="34" id="qwF-w5-igH"/>
+                <constraint firstItem="dgh-yK-4mV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="qwF-w5-igH"/>
                 <constraint firstItem="dgh-yK-4mV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="xYo-mN-0pK"/>
             </constraints>
             <point key="canvasLocation" x="125.95419847328243" y="19.718309859154932"/>

@@ -6,6 +6,9 @@ class SearchController: UIViewController {
     
     var resultViewModel = ResultViewModel()
     var networkManager = NetworkManager()
+    var inputText: String = ""
+    var counter: Int = 1
+
     var userList = [Item]()
     
     override func viewDidLoad() {
@@ -21,17 +24,14 @@ class SearchController: UIViewController {
         tableView.isHidden = true
     }
 }
-// pagination
+// sort each ten alphabetically
+// clear former search results when doing another search
+// add spinner at page bottom
 // style table row properly
 // sort alphabetically by login
 // add sdwebimage
+// clear result of previous search when new search begins
 
-// When you get to page bottom, call api for next page
-// on subsequent api calls, do +1 to page
-// append the result to the userllist array and reload table
-// make 2 func in network manager, 1 for initial request, 2nd for further requests, variable is the page number
-// how to keep track of which page number = decalre count var b4 making next page call
-// 
 extension SearchController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,12 +64,13 @@ extension SearchController: UITableViewDelegate, UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
+        counter += 1
         if position > (tableView.contentSize.height-100-scrollView.frame.size.height) {
             // fetch more data
+            
+            self.networkManager.fetchUser(searchQuery: inputText, pageNum: counter, pagination: true)
 
         }
-//        if position > scrollView.frame.size.height {
-//            print("fetch pageinate")
-//        }
+
     }
 }

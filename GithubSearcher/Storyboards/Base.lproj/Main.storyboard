@@ -16,13 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter search text" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-yz-wSh">
-                                <rect key="frame" x="0.0" y="103" width="393" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter search text" textAlignment="natural" minimumFontSize="25" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-yz-wSh">
+                                <rect key="frame" x="0.0" y="103" width="393" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ceb-4E-TVs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieN-cg-fE9">
-                                <rect key="frame" x="120" y="155.66666666666666" width="152" height="50"/>
+                                <rect key="frame" x="120" y="188" width="152" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0sP-4M-9sZ"/>
                                     <constraint firstAttribute="width" constant="152" id="ARj-gF-sl1"/>
@@ -34,14 +37,14 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5Ik-ld-aBM">
-                                <rect key="frame" x="0.0" y="242.66666666666669" width="393" height="609.33333333333326"/>
+                                <rect key="frame" x="0.0" y="258" width="393" height="594"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RnI-Jy-Xp2">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="75" id="RnI-Jy-Xp2">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RnI-Jy-Xp2" id="qOf-iO-gOh">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -51,10 +54,10 @@
                         <viewLayoutGuide key="safeArea" id="jDI-Cg-62E"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="5Ik-ld-aBM" firstAttribute="top" secondItem="ieN-cg-fE9" secondAttribute="bottom" constant="37" id="BKV-g9-Fco"/>
+                            <constraint firstItem="5Ik-ld-aBM" firstAttribute="top" secondItem="ieN-cg-fE9" secondAttribute="bottom" constant="20" id="BKV-g9-Fco"/>
                             <constraint firstItem="5Ik-ld-aBM" firstAttribute="leading" secondItem="jDI-Cg-62E" secondAttribute="leading" id="Jqx-sL-kj7"/>
                             <constraint firstItem="ieN-cg-fE9" firstAttribute="leading" secondItem="jDI-Cg-62E" secondAttribute="leading" constant="120" id="NhY-kL-2dk"/>
-                            <constraint firstItem="ieN-cg-fE9" firstAttribute="top" secondItem="vuc-yz-wSh" secondAttribute="bottom" constant="18.670000000000002" id="ebg-JC-fEw"/>
+                            <constraint firstItem="ieN-cg-fE9" firstAttribute="top" secondItem="vuc-yz-wSh" secondAttribute="bottom" constant="15" id="ebg-JC-fEw"/>
                             <constraint firstItem="vuc-yz-wSh" firstAttribute="top" secondItem="jDI-Cg-62E" secondAttribute="top" id="mOE-Ho-UfM"/>
                             <constraint firstAttribute="bottom" secondItem="5Ik-ld-aBM" secondAttribute="bottom" id="o3J-Gz-99b"/>
                             <constraint firstItem="jDI-Cg-62E" firstAttribute="trailing" secondItem="ieN-cg-fE9" secondAttribute="trailing" constant="121" id="pTr-3H-ifA"/>
