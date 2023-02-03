@@ -10,7 +10,7 @@ class SearchController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Search github users"
+        title = Constants.mainVCTitle
         tableView.delegate = self
         tableView.dataSource = self
         networkManager.delegate = self
@@ -25,6 +25,12 @@ class SearchController: UIViewController {
 // style table row properly
 // sort alphabetically by login
 // add sdwebimage
+
+// When you get to page bottom, call api for next page
+// on subsequent api calls, do +1 to page
+// append the result to the userllist array and reload table
+// make 2 func in network manager, 1 for initial request, 2nd for further requests, variable is the page number
+// how to keep track of which page number = decalre count var b4 making next page call
 // 
 extension SearchController: UITableViewDataSource {
     

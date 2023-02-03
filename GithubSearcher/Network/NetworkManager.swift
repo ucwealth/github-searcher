@@ -7,10 +7,15 @@ protocol NetworkManagerDelegate {
 struct NetworkManager {
     var delegate: NetworkManagerDelegate?
     
-    func fetchUser(searchQuery: String) {
-        let urlString = "\(Constants.baseUrl)\(searchQuery)&per_page=10"
+    func fetchUser(searchQuery: String, pageNum: Int) {
+        let urlString = "\(Constants.baseUrl)\(searchQuery)&per_page=10&page=\(pageNum)"
         performRequest(with: urlString)
     }
+    
+//    fetchOtherPages(searchQuery: String) {
+//        let urlString = "\(Constants.baseUrl)\(searchQuery)&per_page=10&page=\()"
+//        performRequest(with: urlString)
+//    }
     
     func performRequest(with urlString: String) {
         guard let url = URL(string: urlString) else {

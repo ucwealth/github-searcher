@@ -41,7 +41,7 @@ extension SearchController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let input = searchTextField.text {
-            networkManager.fetchUser(searchQuery: input)
+            networkManager.fetchUser(searchQuery: input, pageNum: 1)
         }
         textField.text = ""
     }
