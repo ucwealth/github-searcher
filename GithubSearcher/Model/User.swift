@@ -10,7 +10,6 @@ struct User: Codable {
         case items
     }
 }
-
 // MARK: - Item
 struct Item: Codable {
     let login: String

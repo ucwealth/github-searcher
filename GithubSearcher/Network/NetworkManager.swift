@@ -5,16 +5,14 @@ protocol NetworkManagerDelegate {
 }
 struct NetworkManager {
     var delegate: NetworkManagerDelegate?
-    var isPaginating = false
-
-    mutating func fetchUser(searchQuery: String, pageNum: Int, pagination: Bool = false) {
-        if pagination {
-            isPaginating = true
+    var isPaginating: Bool = false
+    mutating func fetchUser(searchQuery: String, pageNum: Int = 1, pagination: Bool = false) {
+        let urlString = "\(Constants.baseUrl)\(searchQuery)\(Constants.midUrl)\(pageNum)"
+        if(pagination) {
+            isPaginating = true 
         }
-        let urlString = "\(Constants.baseUrl)\(searchQuery)&per_page=10&page=\(pageNum)"
         performRequest(with: urlString)
     }
-    // if pagination is true, return new data. else, return old data
     
     func performRequest(with urlString: String) {
         guard let url = URL(string: urlString) else {
@@ -34,24 +32,5 @@ struct NetworkManager {
         }
         task.resume()
     }
-//
-//    public func getUsers(completion: @escaping(Result<[User], Error>) -> () ) {
-//        guard let url = URL(string: Constants.baseUrl) else {
-//            return
-//        }
-//        let request = URLRequest(url: url)
-//        let task = URLSession.shared.dataTask(with: request) { data, _, error in
-//            if let data = data {
-//                do {
-//                    let result = try JSONDecoder().decode([User].self, from: data)
-//                    completion(.success(result))
-//                } catch {
-//                    print(error.localizedDescription)
-//                    completion(.failure(error))
-//                }
-//            }
-//        }
-//        task.resume()
-//    }
-    
+ 
 }

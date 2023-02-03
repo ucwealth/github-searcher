@@ -5,6 +5,8 @@ import SDWebImage
 extension SearchController: NetworkManagerDelegate {
     
     func didUpdateUser(_ networkManager: NetworkManager, user:  User) {
+        var networkMan = networkManager
+        networkMan.isPaginating = false
         DispatchQueue.main.async {[weak self] in
             self?.userList.append(
                 contentsOf: user.items
@@ -31,6 +33,7 @@ extension SearchController: UITextFieldDelegate {
 
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         userList = []
+        // clear cached images from previous search result
         SDImageCache.shared.clearMemory()
         SDImageCache.shared.clearDisk()
         tableView.reloadData()
@@ -40,7 +43,7 @@ extension SearchController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let input = searchTextField.text {
             self.inputText = input
-            networkManager.fetchUser(searchQuery: input, pageNum: 1, pagination: false)
+            networkManager.fetchUser(searchQuery: input)
         }
         textField.text = ""
     }

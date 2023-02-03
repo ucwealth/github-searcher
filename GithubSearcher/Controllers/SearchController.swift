@@ -33,6 +33,8 @@ class SearchController: UIViewController {
 }
 
 // write tests
+// update readme
+// 
 
 extension SearchController: UITableViewDataSource {
     
@@ -61,6 +63,10 @@ extension SearchController: UITableViewDelegate, UIScrollViewDelegate {
         let position = scrollView.contentOffset.y
         counter += 1
         if position > (tableView.contentSize.height-50-scrollView.frame.size.height) {
+            guard !networkManager.isPaginating else {
+                // already fetching more data
+                return
+            }
             // fetch more data
             tableView.tableFooterView = createSpinner()
             networkManager.fetchUser(searchQuery: inputText, pageNum: counter, pagination: true)
