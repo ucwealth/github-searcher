@@ -11,7 +11,6 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .lightGray
         if let res = result {
             setup(with: res)
         }
@@ -20,7 +19,7 @@ class DetailViewController: UIViewController {
     private func setup(with model: Item) {
         avatar.sd_setImage(with: URL(string: model.avatarURL))
         login.text = model.login
-        type.text = model.type
+        type.text = model.type // lat
     }
 
 }

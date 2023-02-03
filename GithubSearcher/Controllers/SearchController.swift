@@ -32,10 +32,7 @@ class SearchController: UIViewController {
     }
 }
 
-// add sdwebimage
 // write tests
-// show error message on the page when name wasnt found?
-//
 
 extension SearchController: UITableViewDataSource {
     
