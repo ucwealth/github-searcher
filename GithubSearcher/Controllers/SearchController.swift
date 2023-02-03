@@ -31,8 +31,11 @@ class SearchController: UIViewController {
         return spinnerView
     }
 }
-// add spinner at page bottom
+
 // add sdwebimage
+// write tests
+// show error message on the page when name wasnt found?
+//
 
 extension SearchController: UITableViewDataSource {
     
@@ -60,7 +63,7 @@ extension SearchController: UITableViewDelegate, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
         counter += 1
-        if position > (tableView.contentSize.height-100-scrollView.frame.size.height) {
+        if position > (tableView.contentSize.height-50-scrollView.frame.size.height) {
             // fetch more data
             tableView.tableFooterView = createSpinner()
             networkManager.fetchUser(searchQuery: inputText, pageNum: counter, pagination: true)

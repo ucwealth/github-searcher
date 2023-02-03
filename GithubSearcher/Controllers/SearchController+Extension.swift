@@ -1,7 +1,7 @@
 import UIKit
+import SDWebImage
 
 // MARK: - NetworkManagerDelegate
-
 extension SearchController: NetworkManagerDelegate {
     
     func didUpdateUser(_ networkManager: NetworkManager, user:  User) {
@@ -31,6 +31,9 @@ extension SearchController: UITextFieldDelegate {
 
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         userList = []
+        SDImageCache.shared.clearMemory()
+        SDImageCache.shared.clearDisk()
+        tableView.reloadData()
         searchTextField.endEditing(true)
     }
     

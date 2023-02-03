@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
     }
     
     private func setup(with model: Item) {
-        avatar.loadImage(from: URL(string: model.avatarURL)!)
+        avatar.sd_setImage(with: URL(string: model.avatarURL))
         login.text = model.login
         type.text = model.type
     }
