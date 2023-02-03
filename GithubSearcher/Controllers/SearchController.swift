@@ -21,6 +21,15 @@ class SearchController: UIViewController {
                     forCellReuseIdentifier: ResultCell.identifier)
         tableView.isHidden = true
     }
+    
+    private func createSpinner() -> UIView {
+        let spinnerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
+        let spinner = UIActivityIndicatorView()
+        spinner.center = spinnerView.center
+        spinnerView.addSubview(spinner)
+        spinner.startAnimating()
+        return spinnerView
+    }
 }
 // add spinner at page bottom
 // add sdwebimage
@@ -43,16 +52,9 @@ extension SearchController: UITableViewDataSource {
 extension SearchController: UITableViewDelegate, UIScrollViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
         let detailsVC = DetailViewController()
         detailsVC.result = userList[indexPath.row]
         navigationController?.pushViewController(detailsVC, animated: true)
-
-//        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailsController {
-//            vc.result = resultViewModel.dummyResults[indexPath.row]
-//            navigationController?.pushViewController(vc, animated: true)
-//        }
-        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -60,7 +62,9 @@ extension SearchController: UITableViewDelegate, UIScrollViewDelegate {
         counter += 1
         if position > (tableView.contentSize.height-100-scrollView.frame.size.height) {
             // fetch more data
-            self.networkManager.fetchUser(searchQuery: inputText, pageNum: counter, pagination: true)
+            tableView.tableFooterView = createSpinner()
+            networkManager.fetchUser(searchQuery: inputText, pageNum: counter, pagination: true)
+            tableView.tableFooterView = nil
 
         }
 
