@@ -5,7 +5,7 @@ class SearchController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     
     var networkManager = NetworkManager()
-    var inputText: String = ""
+    var inputText: String = "yourInput"
     var counter: Int = 1
     var userList = [Item]()
     
@@ -34,7 +34,18 @@ class SearchController: UIViewController {
 
 // write tests
 // update readme
-// 
+
+// text if isPaginating actually works
+
+// test sdweb image caching
+// test network call
+// test setup func in 
+
+// test the spinner
+// test search box functionality uitest
+// test tableview updating - uitest
+// test detail page working
+//
 
 extension SearchController: UITableViewDataSource {
     

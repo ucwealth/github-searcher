@@ -1,15 +1,7 @@
-//
-//  GithubSearcherTests.swift
-//  GithubSearcherTests
-//
-//  Created by Uche Okeke on 02/02/2023.
-//
-
 import XCTest
 @testable import GithubSearcher
 
 final class GithubSearcherTests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
