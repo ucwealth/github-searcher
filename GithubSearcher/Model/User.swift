@@ -1,5 +1,4 @@
 import Foundation
-//   let user = try? JSONDecoder().decode(User.self, from: jsonData)
 
 // MARK: - User
 struct User: Codable {

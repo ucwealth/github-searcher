@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  GithubSearcher
-//
-//  Created by Uche Okeke on 02/02/2023.
-//
-
 import UIKit
 
 @main

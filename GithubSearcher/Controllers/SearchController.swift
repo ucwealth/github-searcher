@@ -4,11 +4,9 @@ class SearchController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextField: UITextField!
     
-    var resultViewModel = ResultViewModel()
     var networkManager = NetworkManager()
     var inputText: String = ""
     var counter: Int = 1
-
     var userList = [Item]()
     
     override func viewDidLoad() {
@@ -25,7 +23,6 @@ class SearchController: UIViewController {
     }
 }
 // add spinner at page bottom
-// sort alphabetically by login
 // add sdwebimage
 
 extension SearchController: UITableViewDataSource {
@@ -63,7 +60,6 @@ extension SearchController: UITableViewDelegate, UIScrollViewDelegate {
         counter += 1
         if position > (tableView.contentSize.height-100-scrollView.frame.size.height) {
             // fetch more data
-            
             self.networkManager.fetchUser(searchQuery: inputText, pageNum: counter, pagination: true)
 
         }

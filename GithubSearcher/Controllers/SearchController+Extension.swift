@@ -6,7 +6,9 @@ extension SearchController: NetworkManagerDelegate {
     
     func didUpdateUser(_ networkManager: NetworkManager, user:  User) {
         DispatchQueue.main.async {[weak self] in
-            self?.userList.append(contentsOf: user.items)
+            self?.userList.append(
+                contentsOf: user.items
+                    .sorted { $0.login.lowercased() < $1.login.lowercased() })
             self?.tableView.reloadData()
             self?.tableView.isHidden = false
         }
